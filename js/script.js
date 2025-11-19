@@ -35,7 +35,6 @@ if (tieneMembresia == "si") {
   alert("Te invitamos a afiliarte 👋");
 }; */
 
-
 /* 🎯 Ejercicio 4: Envío Gratis 📦
 Vamos a aplicar esto a tu negocio de "Origen del Valle".
 Tu misión: Crea un sistema que decida si un cliente recibe envío gratis.
@@ -108,3 +107,152 @@ while (palabra !== "JavaScript") {
   palabra = prompt("Dime la clave secreta");
 }
 alert("¡Clave correcta! Bienvenido"); */
+
+/* let contraseña;
+let saldoInicial = 1000;
+let saldo
+
+for (let intentos = 1; intentos < 5; intentos ++) {
+  contraseña = prompt("Ingrese su contraseña");
+  if (contraseña != 1234) {
+    alert("Contraseña incorrecta, inténtelo de nuevo");
+  } else {
+    alert("Contraseña correcta");
+    break;
+  }
+  if (intentos === 3) {
+    alert("Tarjeta bloqueada ❌");
+    break;
+  }
+}
+
+while (contraseña == 1234) {
+  let acción = prompt(
+    "¿Qué deseas hacer? digita 1 para Retirar o 2 para Salir"
+  );
+  if (acción == 1) {
+    alert(`Tu saldo es ${saldoInicial}`);
+    let montoRetirar = prompt("Introduce el monto a retirar");
+    if (montoRetirar > saldoInicial) {
+      alert("Saldo insuficiente");
+    } else {
+      saldo = saldoInicial - montoRetirar;
+      alert(`Tu saldo es ${saldo}`);
+      alert("Hasta pronto");
+    }
+    break;
+  } else {
+    alert("Hasta pronto");
+  }
+  break;
+} */
+
+/* let contraseña;
+  let saldoInicial = 1000;
+
+  // 1. Lógica de Seguridad (3 Intentos)
+  for (let intentos = 1; intentos <= 3; intentos++) {
+    contraseña = prompt("Ingrese su contraseña (intento " + intentos + "/3)");
+
+    if (contraseña == 1234) {
+      alert("Contraseña correcta. Bienvenido/a. ✅");
+      break; // Rompemos el ciclo for porque ya entró
+    } else {
+      alert("Contraseña incorrecta ❌");
+    }
+
+    // Si llegamos al intento 3 y falló, bloqueamos
+    if (intentos === 3) {
+      alert("Tarjeta bloqueada por seguridad 🚫");
+      contraseña = null; // Aseguramos que no entre al while
+    }
+  }
+
+  // 2. Lógica del Sistema (Bucle Infinito controlado)
+  while (contraseña == 1234) {
+    let acción = prompt("Saldo: S/" + saldoInicial + "\n1. Retirar \n2. Salir");
+
+    if (acción == "1") {
+      let montoRetirar = Number(prompt("Ingrese monto a retirar:"));
+
+      if (montoRetirar > saldoInicial) {
+        alert("Saldo insuficiente 📉");
+      } else {
+        // CORRECCIÓN CLAVE 1: Actualizamos la variable original
+        saldoInicial = saldoInicial - montoRetirar;
+        alert("Retiro exitoso. Nuevo saldo: S/" + saldoInicial + " 💰");
+      }
+      // CORRECCIÓN CLAVE 2: NO ponemos break aquí para que el ciclo se repita
+    } else if (acción == "2") {
+      alert("Gracias por usar nuestro cajero. ¡Hasta luego! 👋");
+      break; // Este es el ÚNICO break que apaga el cajero
+    } else {
+      alert("Opción no válida ⚠️");
+    }
+  } */
+
+/* let saldo = 100;
+while (saldo > 0) {
+  let precio = prompt("Ingresa precio (o dale a Cancelar para salir)");
+  if (precio == null) {
+    break;
+  } else {
+    precio = Number(precio);
+    if (isNaN(precio)) {
+      alert("Eso no es un número válido");
+      continue;
+    }
+    if (precio <= saldo) {
+      saldo = saldo - precio;
+      alert("Tu saldo es: " + saldo);
+    } else {
+      alert("❌ No te alcanza");
+    }
+  }
+} */
+
+/* let piso = 1;
+while (true) {
+  let choice = prompt("Estás en el piso "+piso+". \n1. Subir \n2. Bajar \n3. Salir");
+  if (choice == "1") {
+    if (piso < 10) {
+      piso++;
+    } else {
+      alert("⚠️ ¡Ya estás en el último piso!");
+    }
+  } else if (choice == "2") {
+    if (piso > 1) {
+      piso--;
+    } else {
+      alert("⚠️ ¡Ya estás en planta baja!");
+    }
+  } else if (choice == "3") {
+    break;
+  } else {
+    alert("Comando no válido");
+  }
+} */
+
+let numeroAlumnos;
+let notaAlumno;
+let sumaTotal = 0;
+let aprobados = 0;
+let promedioAlumnos;
+
+do {
+  numeroAlumnos = Number(prompt("¿Cuantos alumnos tienes?"));
+} while (numeroAlumnos <= 0);
+
+for (let repetir = 1; repetir <= numeroAlumnos ; repetir++) {
+  do {
+    notaAlumno = Number(prompt("Escriba la nota del alumno X"))
+  } while (notaAlumno < 0 || notaAlumno > 20);
+  sumaTotal = sumaTotal + notaAlumno;
+  if (notaAlumno >= 11) {
+    aprobados++;
+  }
+}
+
+promedioAlumnos = sumaTotal / numeroAlumnos;
+alert("Promedio total del salón es " + promedioAlumnos);
+alert("Alumnos aprobados: " + aprobados);
