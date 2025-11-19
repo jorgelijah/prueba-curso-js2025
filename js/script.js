@@ -48,11 +48,49 @@ Si no se cumplen ambas:
 Muestra: "El costo de envío es 15 soles".
 ¡Inténtalo usando el operador &&! */
 
-let montoCompra = prompt("Introduce el monto de compra");
+/* let montoCompra = prompt("Introduce el monto de compra");
 let ciudad = prompt("¿De que ciudad del Perú eres?");
 
 if (montoCompra >= 100 && ciudad == "Lima") {
   alert("¡Felicidades! Tienes envío GRATIS 🚚");
 } else {
   alert("El costo de envío es 15 soles");
+}; */
+
+/* for (let i = 1; i <= 5; i++) {
+  console.log("Revisando producto #" + i);
+}; */
+
+/* for (let i = 1; i <= 10; i++) {
+  if (i <= 5) {
+    console.log(`Producto #${i}: Oferta Especial 🔥`);
+  } else {
+    console.log(`Producto #${i}: Precio Normal 💰`);
+  };
+}; */
+
+/* for (let i = 1; i <= 10; i++) {
+  console.log(`Producto #${i}: ${i <= 5 ? "Oferta Especial 🔥" : "Precio Normal 💰"}`);
+} */
+
+// RETO 1
+let usuario = prompt("Introduce tu usuario");
+let contraseña = prompt("Introduce tu contraseña");
+
+if ((usuario == "admin" || usuario == "gerente") && contraseña == "secreto123") {
+  alert("Acceso concedido 🔓");
+} else {
+  alert("Acceso denegado 🔒");
+};
+
+// RETO 2
+for (let piso = 1; piso <= 20; piso++) {
+  console.log(`Piso${piso}${piso !== 13 ? " " : " Piso clausurado 👻" }`);
+};
+
+// RETO 3
+for (let jugador = 1; jugador <= 2; jugador++) {
+  let goles = prompt("Goles anotados");
+  let lesionado = prompt("Jugador lesionado"); //si, no
+  console.log(`${goles > 10 && lesionado !== "si" ? `Jugador${jugador}: Convocado ⚽` : `Jugador${jugador}: Descartado ❌` }`);
 };
