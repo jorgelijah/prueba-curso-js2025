@@ -55,25 +55,25 @@ if (montoCompra >= 100 && ciudad == "Lima") {
   alert("¡Felicidades! Tienes envío GRATIS 🚚");
 } else {
   alert("El costo de envío es 15 soles");
-}; */
+} */
 
 /* for (let i = 1; i <= 5; i++) {
   console.log("Revisando producto #" + i);
-}; */
+} */
 
 /* for (let i = 1; i <= 10; i++) {
   if (i <= 5) {
     console.log(`Producto #${i}: Oferta Especial 🔥`);
   } else {
     console.log(`Producto #${i}: Precio Normal 💰`);
-  };
-}; */
+  }
+} */
 
 /* for (let i = 1; i <= 10; i++) {
   console.log(`Producto #${i}: ${i <= 5 ? "Oferta Especial 🔥" : "Precio Normal 💰"}`);
 } */
 
-// RETO 1
+/* // RETO 1
 let usuario = prompt("Introduce tu usuario");
 let contraseña = prompt("Introduce tu contraseña");
 
@@ -81,16 +81,30 @@ if ((usuario == "admin" || usuario == "gerente") && contraseña == "secreto123")
   alert("Acceso concedido 🔓");
 } else {
   alert("Acceso denegado 🔒");
-};
+}
 
 // RETO 2
 for (let piso = 1; piso <= 20; piso++) {
   console.log(`Piso${piso}${piso !== 13 ? " " : " Piso clausurado 👻" }`);
-};
+}
 
 // RETO 3
 for (let jugador = 1; jugador <= 2; jugador++) {
   let goles = prompt("Goles anotados");
   let lesionado = prompt("Jugador lesionado"); //si, no
   console.log(`${goles > 10 && lesionado !== "si" ? `Jugador${jugador}: Convocado ⚽` : `Jugador${jugador}: Descartado ❌` }`);
-};
+} */
+
+/* let ahorro = 0;
+while (ahorro < 50) {
+  ahorro += 10;
+  console.log(`Ahorrando ... Llevo ${ahorro} soles`);
+}
+
+console.log(`¡Meta alcanzada! Total: ${ahorro} soles`); */
+
+/* let palabra = "";
+while (palabra !== "JavaScript") {
+  palabra = prompt("Dime la clave secreta");
+}
+alert("¡Clave correcta! Bienvenido"); */
