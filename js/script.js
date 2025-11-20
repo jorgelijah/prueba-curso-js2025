@@ -233,7 +233,7 @@ while (true) {
   }
 } */
 
-let numeroAlumnos;
+/* let numeroAlumnos;
 let notaAlumno;
 let sumaTotal = 0;
 let aprobados = 0;
@@ -255,4 +255,67 @@ for (let repetir = 1; repetir <= numeroAlumnos ; repetir++) {
 
 promedioAlumnos = sumaTotal / numeroAlumnos;
 alert("Promedio total del salón es " + promedioAlumnos);
-alert("Alumnos aprobados: " + aprobados);
+alert("Alumnos aprobados: " + aprobados); */
+
+/* let colorSemaforo = prompt("Escoge un color:\n1. verde o green \n2. amarillo o yellow \n3. rojo o red");
+
+switch (colorSemaforo) {
+  case "verde":
+  case "green":
+    alert("Avanzar");
+    break;
+  case "amarillo":
+  case "yellow":
+    alert("Precaución");
+    break;
+  case "rojo":
+  case "red":
+    alert("Detenerse");
+    break;
+  default:
+    alert("Error");
+    break;
+} */
+
+/* let precios = [100, 50, 25, 200]; 
+let total = 0;
+let i = 0;
+
+for (let i = 0; i < precios.length; i++) {
+  total = total + precios[i];
+  console.log("Precio total actual es " + total);
+}
+
+while (i < precios.length) {
+  console.log(`El valor de i es ${i} antes de ser aumentada en 1 y el precio a sumarse sera ${precios[i]}`)
+  total = total + precios[i];
+  console.log("Precio total actual es " + total);
+  i++;
+  console.log(`Ahora el valor de i es ${i} y el valor de precios[i] es ${precios[i]}`);
+} */
+
+/* let nombreUsuario;
+
+do {
+  nombreUsuario = prompt("Ingresa tu nombre aquí:")
+} while (nombreUsuario === "" || nombreUsuario === null); */
+
+
+/* let notas = [15, 8, 30, 20, 11, -1, 18];
+
+for (let i = 0; i < notas.length; i++) {
+  console.log(notas[i]);
+  if (notas[i] < 0) {
+    console.log("Error crítico detectado: " + notas[i]);
+    break;
+  }
+  if (notas[i] > 20) {
+    console.log("Error de tipeo");
+    continue; 
+  }
+  if (notas[i] >= 11) {
+    console.log(`Nota ${notas[i]}: Aprobado.`);
+  } else {
+    console.log(`Nota ${notas[i]}: Desaprobado.`);
+  }
+} */
