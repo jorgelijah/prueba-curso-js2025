@@ -301,7 +301,7 @@ do {
 } while (nombreUsuario === "" || nombreUsuario === null); */
 
 
-let notas = [15, 8, 30, 20, 11, -1, 18];
+/* let notas = [15, 8, 30, 20, 11, -1, 18];
 
 for (let i = 0; i < notas.length; i++) {
   console.log(notas[i]);
@@ -317,5 +317,38 @@ for (let i = 0; i < notas.length; i++) {
     console.log(`Nota ${notas[i]}: Aprobado.`);
   } else {
     console.log(`Nota ${notas[i]}: Desaprobado.`);
+  }
+} */
+
+//Evaluación de tu código:
+//Jerarquía Perfecta: Pusiste la seguridad primero (break), luego la limpieza (continue) y al final la lógica de negocio (if/else). Ese es el orden correcto en ingeniería: Primero proteges el sistema, luego filtras la basura, y al final trabajas.
+
+/* function calcularArea(base, altura) {
+  return base * altura;
+}
+
+let areaX = calcularArea(10, 5);
+console.log(areaX); */
+
+//PROCESAR NOTAS(FX, IF, FOR, BREAK AND CONTINUE)
+
+let aulaA = [15, 8, 30, 20];
+let aulaB = [10, -1, 18];
+
+function procesarNotas(listaDeNotas) {
+  for (let i = 0; i < listaDeNotas.length; i++) {
+    if (listaDeNotas[i] < 0) {
+      console.log("Dato no valido: " + listaDeNotas[i]);
+      break;
+    }
+    if (listaDeNotas[i] > 20) {
+      console.log("Error de tipeo");
+      continue;
+    }
+    if (listaDeNotas[i] >= 11) {
+      console.log(`Nota ${listaDeNotas[i]}: Aprobado.`);
+    } else {
+      console.log(`Nota ${listaDeNotas[i]}: Desaprobado.`);
+    }
   }
 }
