@@ -301,7 +301,7 @@ do {
 } while (nombreUsuario === "" || nombreUsuario === null); */
 
 
-/* let notas = [15, 8, 30, 20, 11, -1, 18];
+let notas = [15, 8, 30, 20, 11, -1, 18];
 
 for (let i = 0; i < notas.length; i++) {
   console.log(notas[i]);
@@ -318,4 +318,4 @@ for (let i = 0; i < notas.length; i++) {
   } else {
     console.log(`Nota ${notas[i]}: Desaprobado.`);
   }
-} */
+}
