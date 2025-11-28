@@ -380,3 +380,79 @@ if (accesoConcedido) {
   console.log("Intruso detectado");
 } */
 
+/* function buscarProducto(inventario, productoBuscado) {
+  for (let i = 0; i < inventario.length; i++) {
+    if (inventario[i] === productoBuscado) {
+      return i;
+    }
+  }
+  return -1;
+}
+
+let stock = ["Laptop", "Teclado", "Mouse", "Monitor"];
+console.log(buscarProducto(stock, "Teclado"));
+ */
+
+//El Escenario: Eres un médico analizando datos. Tienes una lista de temperaturas de pacientes.
+// Necesitas una función que te devuelva una nueva lista que contenga SOLO las temperaturas que indican fiebre (mayores a 37).
+
+/* let pacientes = [36, 37.5, 38, 36.5, 39, 35];
+
+function obtenerFiebres(listaDeTemperaturas) {
+  let fiebres = [];
+  for (let i = 0; i < listaDeTemperaturas.length; i++) {
+    if (listaDeTemperaturas[i] > 37) {
+      fiebres.push(listaDeTemperaturas[i]);
+    }
+  }
+  return fiebres;
+}
+
+console.log(obtenerFiebres(pacientes)); */
+
+//El Escenario: Como psicólogo, aplicaste un test de ansiedad de 5 preguntas a un paciente.
+// Las respuestas son numéricas (del 1 al 10).
+// Necesitas una función que calcule el promedio de ansiedad.
+
+/* function calcularPromedio(puntajes) {
+  let sumaTotal = 0;
+  for (let i = 0; i < puntajes.length; i++) {
+    sumaTotal = sumaTotal + puntajes[i];
+  }
+  let promedio = sumaTotal / puntajes.length;
+  return promedio;
+}
+
+let testAnsiedad = [8, 5, 9, 7, 6]; 
+
+console.log(calcularPromedio(testAnsiedad)); */
+
+/* function evaluarSemana(registroDeHoras) {
+  let sumaHoras = 0;
+  let diasNoLaborados = 0;
+  let promedioHoras = 0;
+
+  for (let i = 0; i < registroDeHoras.length; i++) {
+    sumaHoras = sumaHoras + registroDeHoras[i];
+
+    if (registroDeHoras[i] === 0) {
+      diasNoLaborados++;
+    }
+  }
+  promedioHoras = sumaHoras / registroDeHoras.length;
+  if (promedioHoras < 4) {
+    return "Rendimiento bajo (Promedio: " + promedioHoras + ")";
+  } else if (promedioHoras >= 4 && diasNoLaborados >= 2) {
+    return `Rendimiento irregular (Promedio: ${promedioHoras}, pero ${diasNoLaborados} días de cero)`;
+  } else {
+    return "Rendimiento optimo";
+  }
+}
+
+let semana1 = [8, 8, 8, 8, 8]; // Debería ser Óptimo
+let semana2 = [2, 3, 2, 0, 1]; // Debería ser Bajo (Promedio: 1.6)
+let semana3 = [10, 0, 10, 0, 10]; // Debería ser Irregular (Promedio: 6, pero 2 días de cero)
+
+console.log(evaluarSemana(semana1));
+console.log(evaluarSemana(semana2));
+console.log(evaluarSemana(semana3)); */
