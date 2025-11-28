@@ -300,7 +300,6 @@ do {
   nombreUsuario = prompt("Ingresa tu nombre aquí:")
 } while (nombreUsuario === "" || nombreUsuario === null); */
 
-
 /* let notas = [15, 8, 30, 20, 11, -1, 18];
 
 for (let i = 0; i < notas.length; i++) {
@@ -332,23 +331,52 @@ console.log(areaX); */
 
 //PROCESAR NOTAS(FX, IF, FOR, BREAK AND CONTINUE)
 
-let aulaA = [15, 8, 30, 20];
+/* let aulaA = [15, 8, 30, 20];
 let aulaB = [10, -1, 18];
 
 function procesarNotas(listaDeNotas) {
+  let resultados = [];
   for (let i = 0; i < listaDeNotas.length; i++) {
     if (listaDeNotas[i] < 0) {
-      console.log("Dato no valido: " + listaDeNotas[i]);
+      resultados.push("Dato no valido: " + listaDeNotas[i]);
       break;
     }
     if (listaDeNotas[i] > 20) {
-      console.log("Error de tipeo");
+      resultados.push("Error de tipeo");
       continue;
     }
     if (listaDeNotas[i] >= 11) {
-      console.log(`Nota ${listaDeNotas[i]}: Aprobado.`);
+      resultados.push(`Nota ${listaDeNotas[i]}: Aprobado.`);
     } else {
-      console.log(`Nota ${listaDeNotas[i]}: Desaprobado.`);
+      resultados.push(`Nota ${listaDeNotas[i]}: Desaprobado.`);
     }
   }
+  return resultados;
 }
+
+let notasA = procesarNotas(aulaA);
+let notasB = procesarNotas(aulaB);
+
+console.log(notasA);
+console.log(notasB); */
+
+/* function validarEntrada() {
+  let claveMaestra = 1234;
+  for (let i = 1; i <= 3; i++) {
+    let intento = Number(prompt("Introduce tu contraseña"));
+    if (claveMaestra === intento) {
+      return true;
+    }
+    alert("Intento fallido " + (3 - i) + " intentos.");
+  }
+  return false;
+}
+
+let accesoConcedido = validarEntrada();
+
+if (accesoConcedido) {
+  console.log("Bienvenido a la bóveda");
+} else {
+  console.log("Intruso detectado");
+} */
+
