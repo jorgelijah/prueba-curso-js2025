@@ -456,3 +456,120 @@ let semana3 = [10, 0, 10, 0, 10]; // Debería ser Irregular (Promedio: 6, pero 2
 console.log(evaluarSemana(semana1));
 console.log(evaluarSemana(semana2));
 console.log(evaluarSemana(semana3)); */
+
+//Instrucciones Técnicas:
+//Crea una función llamada encontrarPicoMaximo.
+//Recibe un parámetro traficoPorHora (un array de números).
+//El Reto Lógico (Sin usar trucos):
+//No puedes usar funciones mágicas como Math.max(). Tienes que hacerlo con lógica pura de bucles.
+//Necesitarás una variable auxiliar (ej: let maximoActual) que empiece valiendo 0 (o el primer valor del array).
+//Recorre el array. En cada vuelta, compara: ¿Es el número actual MAYOR que mi maximoActual?
+//Si es mayor, actualiza tu variable maximoActual con ese nuevo número (porque encontraste un nuevo rey).
+//Return: Devuelve el número más alto encontrado al final.
+
+/* function encontrarPicoMaximo(traficoPorHora) {
+  let maximoActual = 0;
+  for (let i = 0; i < traficoPorHora.length; i++) {
+    if (traficoPorHora[i] > maximoActual) {
+      maximoActual = traficoPorHora[i];
+    }
+  }
+  return maximoActual;
+}
+
+let lunes = [100, 450, 200, 50, 10];      // Debería devolver 450
+let martes = [50, 10, 20, 30];            // Debería devolver 50
+let miercoles = [5, 5, 5, 5];             // Debería devolver 5
+
+console.log(encontrarPicoMaximo(lunes));
+console.log(encontrarPicoMaximo(martes));
+console.log(encontrarPicoMaximo(miercoles)); */
+
+//Especificaciones del Algoritmo (Léelas con cuidado):
+
+/* Crea la función generarReporte que reciba listaPagos.
+Necesitas dos variables internas: totalGanancias (acumulador) y sesionesPagadas (contador).
+Recorre la lista.
+Regla de Seguridad (Break): Si encuentras un número negativo, significa que hackearon el sistema. Detén el bucle inmediatamente y devuelve el texto exacto: "Error Crítico: Datos corruptos".
+
+Regla de Limpieza (Continue): Si encuentras un 0, es una sesión "Pro Bono" (gratuita). No suma dinero ni cuenta como pagada. Sáltala y sigue con la siguiente.
+Regla de Negocio (Lógica): Si el número es positivo, súmalo al totalGanancias y aumenta en 1 el contador de sesionesPagadas.
+
+El Retorno Final (Decision Making): Al terminar el bucle (si no hubo errores), evalúa:
+Si totalGanancias es mayor a 500 Y (&&) tuviste más de 3 sesiones pagadas: Devuelve "Semana Exitosa: [Total]" (pon el valor real).
+Si no cumples eso: Devuelve "Semana Baja: [Total]". */
+
+/* function generarReporte(listasPagos) {
+
+  let totalGanancias = 0;
+  let sesionesPagadas = 0;
+
+  for (let i = 0; i < listasPagos.length; i++) {
+    if (listasPagos[i] < 0) {
+      return "Error Crítico; Datos corruptos";
+    } else if (listasPagos[i] === 0) {
+      continue;
+    } else {
+      totalGanancias = totalGanancias + listasPagos[i];
+      sesionesPagadas++;
+    }
+  }
+
+  //console.log(totalGanancias);
+  //console.log(sesionesPagadas);
+  
+  if (totalGanancias > 500 && sesionesPagadas >= 3) {
+    return `Semana exitosa: ${totalGanancias}`;
+  } else {
+    return `Semana baja: ${totalGanancias}`;
+  }
+}
+
+let caja1 = [100, 200, 0, 300, 0];    // Debería ser "Semana Exitosa: 600" (3 sesiones pagadas, >500 soles)
+let caja2 = [50, 0, 100];             // Debería ser "Semana Baja: 150"
+let caja3 = [100, 200, -50, 300];     // Debería ser "Error Crítico: Datos corruptos"
+
+console.log(generarReporte(caja1));
+console.log(generarReporte(caja2));
+console.log(generarReporte(caja3)); */
+
+/* function simularJornada(tareas) {
+  let energia = 100;
+  let ingresos = 0;
+
+  for (let i = 0; i < tareas.length; i++) {
+    while (energia <= 10) {
+      return "Día terminado, sin energía";
+    }
+    switch (tareas[i]) {
+      case "Terapia":
+        energia = energia - 15;
+        ingresos = ingresos + 100;
+        break;
+      case "Admin":
+        energia = energia - 5;
+        break;
+      case "Descanso":
+        energia = energia + 20;
+        continue;
+      case "Urgencia":
+        energia = energia - 30;
+        ingresos = ingresos + 200;
+        let protocoloCalma = 1;
+        do {
+          console.log("Respirando...");
+          protocoloCalma++;
+        } while (protocoloCalma < 4);
+      default:
+        break;
+    }
+  }
+  return `Día terminado. Ingresos: ${ingresos}, Energía final: ${energia}`;
+}
+
+let agenda = ["Terapia", "Terapia", "Admin", "Urgencia", "Terapia", "Descanso"];
+let agendaDificil = ["Urgencia", "Urgencia", "Urgencia", "Terapia"];
+
+console.log(simularJornada(agenda));
+console.log(simularJornada(agendaDificil));
+ */
