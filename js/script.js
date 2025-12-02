@@ -573,3 +573,35 @@ let agendaDificil = ["Urgencia", "Urgencia", "Urgencia", "Terapia"];
 console.log(simularJornada(agenda));
 console.log(simularJornada(agendaDificil));
  */
+
+//FILTER AND FIND
+
+/* let multitud = ["Persona", "Persona", "Wally", "Persona", "Wally"];
+
+let personaje = multitud.find(x => x === "Wally");
+console.log(personaje);
+ */
+
+/* let precios = [100, 200, 50, 500];
+//1.1
+let nuevosPrecios = precios.map(y => Math.round(y * 1.1)); 
+console.log(nuevosPrecios); */
+
+/* let duraciones = [60.5, 15, 45, 20.8, 60, 30.2];
+let tiemposLimpios = duraciones.map((n) => Math.round(n));
+console.log(tiemposLimpios);
+
+let sesionesCortas = tiemposLimpios.filter((n) => n < 30);
+console.log(sesionesCortas);
+
+let cancelacion = sesionesCortas.find(n => n === 15);
+console.log(cancelacion); */
+
+/* let precios = [10, 20, 30];
+precios.forEach(n => console.log(`Oferta: ${n}`)); */
+
+/* let ventas = [100, 50, 200, 50];
+let totalCaja = ventas.reduce((x, y) => x + y, 0);
+console.log(totalCaja);
+
+ventas.reduce */
