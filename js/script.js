@@ -605,3 +605,57 @@ let totalCaja = ventas.reduce((x, y) => x + y, 0);
 console.log(totalCaja);
 
 ventas.reduce */
+
+//Ejercicio 1
+/* let listaAviones = ["Avión B", "Avión C"];
+listaAviones.unshift("Avión Ambulancia");
+console.log(listaAviones);
+
+let despego = listaAviones.shift();
+console.log(despego);
+ */
+
+//splice ejercicios
+//let colores = ["Rojo", "Verde", "Azul", "Amarillo"];
+//Ejercicio 1: El Borrador El color "Verde" (índice 1) está feo. Elimínalo usando .splice(), pero no agregues nada.
+//Ejercicio 2: El Intruso Queremos agregar "Violeta" entre "Azul" y "Amarillo".
+//Pista: "Azul" es índice 2, "Amarillo" es índice 3. Si te paras en el 3 y borras 0... ¿qué pasa?
+//Ejercicio 3: El Cambiazo El "Rojo" (índice 0) debe ser reemplazado por "Negro" y "Blanco" (dos colores nuevos al mismo tiempo).
+//Pista: Borras 1, pero agregas 2.|
+
+/* colores.splice(1, 1);
+console.log(colores);
+colores.splice(2, 0, "Violeta");
+console.log(colores);
+colores.splice(0, 1, "Negro", "Blanco")
+console.log(colores); */
+
+/* let palabras = ["Hola", "Mundo"];
+let frase = palabras.join(" "); // "Hola Mundo" (separado por espacio)
+console.log(frase);
+let fecha = ["12", "05", "2025"].join("/"); // "12/05/2025"
+console.log(fecha); */
+
+/* let pacientes = ["Pedro", "Ana", "Zoe", "Juan"];
+let estaAna = pacientes.includes("Ana");
+console.log(estaAna);
+
+let posicionZoe = pacientes.indexOf("Zoe");
+console.log(posicionZoe);
+
+console.log(pacientes.sort());
+console.log(pacientes.reverse());
+
+let listaFinal = pacientes.join("-");
+console.log(listaFinal);
+ */
+
+/* let archivoTopSecret = ["Info A", "Info B", "Info C", "Info D"];
+let archivoPublico = ["Noticias", "Clima"];
+
+let evidencia = archivoTopSecret.slice(1, 3);
+console.log(evidencia);
+
+let wikileaks = archivoTopSecret.concat(archivoPublico);
+console.log(wikileaks);
+console.log(archivoTopSecret); */
