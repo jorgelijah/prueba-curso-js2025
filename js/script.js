@@ -659,3 +659,607 @@ console.log(evidencia);
 let wikileaks = archivoTopSecret.concat(archivoPublico);
 console.log(wikileaks);
 console.log(archivoTopSecret); */
+
+/* function encontrarMayor(lista) {
+  let campeon = lista[0];
+  for (let i = 0; i < lista.length; i++) {
+    if (lista[i] > campeon) {
+      campeon = lista[i];
+    }
+  }
+  return campeon;
+}
+
+let resultado1 = encontrarMayor([1, 5, 3]);
+console.log(resultado1); */
+
+//El Examen Final del Módulo 1: "El Promedio" 🎓
+/* function calcularPromedio(lista) {
+  let acumulador = 0;
+  for (let i = 0; i < lista.length; i++) {
+    acumulador += lista[i];
+  }
+  acumulador = acumulador / lista.length;
+  return acumulador;
+}
+
+let notas = [15, 13, 20, 18, 11, 19];
+console.log(calcularPromedio(notas));
+ */
+
+/* let inventario = [
+  {
+    id: 1,
+    val: 100,
+  },
+  {
+    id: 2,
+    val: 300,
+  },
+  {
+    id: 3,
+    val: 50,
+  },
+];
+let total = 0;
+
+for (let i = 0; i < inventario.length; i++) {
+  total = total + inventario[i].val;
+}
+
+for (let item of inventario) {
+  total = total + item["val"]; // el problema es que yo ponía aquí esto: inventario[item].val
+}
+
+console.log(total); */
+
+/* let movimientos = [
+  { tipo: "A", valor: 100 },
+  { tipo: "B", valor: 50 }, // Este debería restar
+  { tipo: "A", valor: 200 },
+  { tipo: "B", valor: 30 }  // Este debería restar
+];
+
+let balance = 0;
+for (let item of movimientos) {
+  item.tipo === "A" ? balance += item.valor : balance -= item.valor;
+}
+console.log(balance); */
+
+/* let carrito = [
+  { nombre: "X", precio: 10, cantidad: 2 }, // 10 * 2 = 20
+  { nombre: "Y", precio: 5, cantidad: 10 }, // 5 * 10 = 50
+  { nombre: "Z", precio: 20, cantidad: 1 }, // 20 * 1 = 20
+];
+
+let acumulador = 0;
+for (let i = 0; i < carrito.length; i++) {
+  acumulador += carrito[i].precio * carrito[i].cantidad;
+}
+console.log(acumulador); */
+
+//Nivel 4: Lógica Multicondicional (El Portero de Discoteca) 🕵️‍♂️
+/* let usuarios = [
+  { nombre: "Ana", edad: 20, activo: true }, // Pasa
+  { nombre: "Beto", edad: 17, activo: true }, // Rebota (muy joven)
+  { nombre: "Carla", edad: 30, activo: false }, // Rebota (inactiva)
+  { nombre: "Dani", edad: 40, activo: true }, // Pasa
+];
+
+let contador = 0;
+for (let item of usuarios) {
+  if (item.edad >= 18 && item.activo) {
+    contador++;
+  }
+}
+console.log(contador);
+ */
+
+//Nivel 5: Lógica de Negocio (Matemáticas Condicionales) 🧮
+/* let aduana = [
+  { nombre: "Gorra", origen: "nacional", precio: 50 },
+  { nombre: "Celular", origen: "importado", precio: 200 }, // Debería sumar 210
+  { nombre: "Polo", origen: "importado", precio: 20 }, // Debería sumar 30
+];
+let total = 0;
+for (let item of aduana) {
+  item.origen === "nacional"
+    ? (total += item.precio)
+    : (total += item.precio + 10);
+}
+console.log(total); */
+
+// Nivel 6: Lógica de Estado(Mutación) 📉
+
+/* let almacen = [
+  { producto: "TV", stock: 5 },
+  { producto: "PC", stock: 0 }, // ¡Cuidado aquí!
+  { producto: "Mouse", stock: 10 },
+];
+
+for (let item of almacen) {
+  if (item.stock !== 0) {
+    item.stock--;
+  }
+}
+console.log(almacen); */
+
+// Nivel 7: El Detective de Datos (Relacionar Dos Listas) 🕵️‍♂️
+/* let usuarios = [
+  { id: 1, nombre: "Ana" },
+  { id: 2, nombre: "Carlos" }, // ¡Objetivo!
+  { id: 3, nombre: "Beto" },
+];
+let compras = [
+  { usuario_id: 1, monto: 50 },
+  { usuario_id: 2, monto: 100 }, // Es de Carlos
+  { usuario_id: 1, monto: 20 },
+  { usuario_id: 2, monto: 200 }, // Es de Carlos
+  { usuario_id: 3, monto: 10 },
+];
+let usuarioNombre = prompt("Escribe el nombre del usuario buscado");
+let usuarioBuscado;
+let comprasUsuarioBuscado = 0;
+for (let item of usuarios) {
+  if (usuarioNombre === item.nombre) {
+    usuarioBuscado = item.id;
+  }
+}
+for (let item of compras) {
+  if (item.usuario_id === usuarioBuscado) {
+    comprasUsuarioBuscado += item.monto;
+  }
+}
+console.log(comprasUsuarioBuscado); */
+
+// Nivel 8: Estructuras Anidadas (Inception) 🤯
+/* let curso = [
+  { nombre: "Juan", notas: [10, 15, 12] },
+  { nombre: "Luisa", notas: [20, 18, 19] }, // Queremos su promedio
+  { nombre: "Ana", notas: [15, 15, 15] },
+];
+let nombreBuscado = "Luisa";
+let promLuisa = 0;
+
+for (let item of curso) {
+  let temp;
+  if (item.nombre === nombreBuscado) {
+    temp = item.notas;
+    for (let element of temp) {
+      promLuisa += element;
+    }
+    promLuisa /= temp.length;
+  }
+}
+
+console.log(promLuisa);
+
+ */
+
+// EL JEFE FINAL: "El Generador de Reportes" 🏆
+//Reglas de Negocio:
+// 1. Para aprobar, el promedio del alumno debe ser mayor o igual a 13.
+// 2. Tienes que calcular el promedio de cada uno (ya sabes hacer eso).
+// 3. Si aprueba, guardas su nombre en la lista de aprobados.
+
+/* let curso = [
+  { nombre: "Juan", notas: [10, 12, 11] }, // Promedio 11 (Reprobado)
+  { nombre: "Luisa", notas: [18, 19, 20] }, // Promedio 19 (Aprobado)
+  { nombre: "Ana", notas: [14, 13, 15] }, // Promedio 14 (Aprobado)
+];
+let aprobados = [];
+
+for (let item of curso) {
+  // recorrer cada objeto
+  let alumnoActual = 0; // si la variable es temporal debe ir dentro de cada iteración en la que la vayas a usar
+  let tempNotas;
+  tempNotas = item.notas; // aquí ya tengo un array solo de las notas
+
+  for (let notas of tempNotas) {
+    // aquí voy a sumar cada nota y la guardo en otra variable
+    alumnoActual += notas;
+  }
+
+  alumnoActual /= tempNotas.length; // aquí, en cada vuelta estoy dividiendo la suma por la cantidad de notas dentro del array
+  if (alumnoActual >= 13) {
+    // continua la ejecución en cascada y antes de terminar la 1era iteración, voy a verificar si aprobó y sumarlo a el array final
+    aprobados.push(item.nombre);
+  }
+}
+console.log(aprobados); */
+
+/* let numeros = [2, 4, 6];
+let cuadrados = numeros.map(numero => numero * numero);
+console.log(cuadrados); */
+
+/* let saldos = [100, -50, 20, -10, 0, 500, -2];
+const deudas = saldos.filter((deuda) => deuda < 0);
+console.log(deudas);
+ */
+
+/* let usuarios = [
+  { id: 1, nombre: "Ana" },
+  { id: 2, nombre: "Carlos" }, // Objetivo
+  { id: 3, nombre: "Beto" },
+  { id: 2, nombre: "Carlos Clon" }, // (Ojo: Si hubiera repetidos, solo me interesa el primero que aparezca)
+];
+
+let idUser = 2;
+let encontrado = usuarios.find((usuario) => usuario.id === idUser);
+console.log(encontrado); */
+
+/* let carrito = [
+  { producto: "Leche", precio: 2 },
+  { producto: "Pan", precio: 1 },
+  { producto: "Carne", precio: 15 },
+];
+
+let total = carrito.reduce((bolsa, item) => bolsa + item.precio, 0);
+console.log(total); */
+
+/* let gastos = [
+  { motivo: "Alquiler", monto: 500 },
+  { motivo: "Luz", monto: 50 },
+  { motivo: "Internet", monto: 40 },
+];
+
+let totalGastos = gastos.reduce((acum, gasto) => acum + gasto.monto, 0);
+console.log(totalGastos);
+ */
+
+//EJEMPLO DE REDUCE
+/* let productos = [
+  { nombre: "Mouse", categoria: "Accesorios", precio: 20, stock: 0 },
+  { nombre: "Monitor", categoria: "Pantallas", precio: 200, stock: 5 },
+  { nombre: "Teclado", categoria: "Accesorios", precio: 50, stock: 2 },
+  { nombre: "Cable HDMI", categoria: "Accesorios", precio: 10, stock: 0 },
+];
+
+let filtrar = productos.filter((lista) => lista.categoria === "Accesorios" && lista.stock > 0);
+console.log(filtrar);
+
+let mapeo = filtrar.map(n => n.nombre);
+console.log(mapeo); */
+
+// CÓDIGO MEJORADO
+/* let nombresAccesoriosConStock = productos
+  .filter((p) => p.categoria === "Accesorios" && p.stock > 0)
+  .map((p) => p.nombre);
+console.log(nombresAccesoriosConStock); */
+
+/* let reducir = productos.reduce((acumulador, sumatoria) => acumulador + sumatoria.precio * sumatoria.stock, 0);
+console.log(reducir); */
+
+// PROGRAMACIÓN ORIENTADA A OBJETOS POO
+/* class CuentaBancaria {
+  // 1. El Constructor: Recibe los datos iniciales
+  constructor(titular, saldoInicial) {
+    this.titular = titular; // "Este objeto tendrá el titular que me pases"
+    this.saldo = saldoInicial;
+  }
+
+  // 2. Métodos (Funciones): Lo que puede hacer (Llamar a las variables usando THIS)
+  mostrarSaldo() {
+    return "El saldo de " + this.titular + " es: " + this.saldo;
+  }
+}
+
+// FABRICAR OBJETOS (Instanciar) con la palabra 'new'
+let cuenta1 = new CuentaBancaria("Ana", 1000);
+let cuenta2 = new CuentaBancaria("Carlos", 500);
+
+console.log(cuenta1.mostrarSaldo()); // "El saldo de Ana es: 1000"
+console.log(cuenta1); */
+
+// ⚡ Tu Misión: La Fábrica de Productos
+
+/* class Producto {
+  // palabra reservada Class para crear objetos
+  constructor(name, price) {
+    // declaración de variables
+    this.nombre = name;
+    this.precio = price;
+  }
+  // declaración de métodos
+  verFicha() {
+    return `${this.nombre} cuesta ${this.precio}`;
+  }
+  aplicarDescuento(porcentaje) {
+    this.precio = this.precio - (this.precio * porcentaje) / 100;
+  }
+}
+
+let producto1 = new Producto("Laptop", 500);
+console.log(producto1.verFicha());
+producto1.aplicarDescuento(50);
+console.log(producto1.verFicha());
+
+class Carrito {
+  constructor() {
+    this.lista = [];
+  }
+  agregar(producto) {
+    this.lista.push(producto);
+  }
+  calcularTotal() {
+    let reducir = this.lista.reduce((x, y) => x + y.precio, 0);
+    return reducir;
+  }
+}
+
+let miCarrito = new Carrito();
+
+let p1 = new Producto("TV", 1000);
+let p2 = new Producto("Mouse", 50);
+
+miCarrito.agregar(p1);
+miCarrito.agregar(p2);
+
+console.log(p1);
+console.log(p2);
+
+console.log(miCarrito);
+
+console.log(miCarrito.calcularTotal()); // Debería salir 1050 */
+
+// EJERCICIO 2 🎅
+
+/* class Producto {
+  constructor(name, price, stock) {
+    this.nombre = name;
+    this.precio = price;
+    this.stock = stock;
+  }
+}
+
+class Tienda {
+  constructor() {
+    this.inventario = [];
+  }
+  agregar(producto) {
+    this.inventario.push(producto);
+  }
+  vender(nombreProducto, cantidad) {
+    let productoEncontrado = this.inventario.find(
+      (n) => n.nombre === nombreProducto
+    );
+    console.log(productoEncontrado);
+    let venta;
+    if (productoEncontrado && productoEncontrado.stock >= cantidad) {
+      productoEncontrado.stock -= cantidad;
+      venta = "Venta realizada"
+    } else {
+      venta = "No hay suficiente stock";
+    }
+    return venta;
+  }
+}
+
+let miTienda = new Tienda();
+
+let p1 = new Producto("Monitor", 200, 10);
+let p2 = new Producto("Teclado", 50, 2);
+let p3 = new Producto("Mouse", 20, 0);
+let p4 = new Producto("Laptop", 1000, 1);
+
+miTienda.agregar(p1);
+miTienda.agregar(p2);
+miTienda.agregar(p3);
+miTienda.agregar(p4);
+
+console.log(miTienda.vender("Teclado", 2)); */
+
+// REFERENCIA DE OBJETOS MODIFICADOS
+/* let a = { stock: 5 };
+let b = a;
+console.log(a);
+console.log(b);
+b.stock = 0;
+console.log(a);
+console.log(b); */
+
+// Reto: "El Sistema de Fidelización" 🏆
+
+// INVENTARIO
+/* class Inventario {
+  constructor(nombre, precio) {
+    this.nombre = nombre;
+    this.precio = precio;
+  }
+}
+// Ejecución
+let p1 = new Inventario("Monitor", 200);
+let p2 = new Inventario("Teclado", 50);
+let p3 = new Inventario("Mouse", 30);
+let p4 = new Inventario("Laptop", 1000);
+//---------------------------------------------------------------------------------------------------------------------
+
+// CARRITO
+class Carrito {
+  constructor() {
+    this.carrito = [];
+  }
+
+  agregarProductos(producto) {
+    this.carrito.push(producto);
+  }
+
+  totalCarrito() {
+    let sumaTotal = this.carrito.reduce(
+      (acumulador, sumatoria) => acumulador + sumatoria.precio,
+      0
+    );
+    return sumaTotal;
+  }
+
+  quitarProducto(nombre) {
+    let indiceBuscado = 0;
+    indiceBuscado = this.carrito.findIndex((n) => n.nombre === nombre);
+    console.log(indiceBuscado);
+    if (indiceBuscado !== -1) {
+      this.carrito.splice(indiceBuscado, 1);
+    } else {
+      console.log("Ítem no encontrado");
+    }
+  }
+}
+//---------------------------------------------------------------------------------------------------------------------
+
+// USUARIO
+class Usuario {
+  constructor(nombreNuevo) {
+    this.nombre = nombreNuevo;
+    this.nivel = "Bronce";
+    this.puntos = 0;
+  }
+
+  finalizarCompra(carritoUsuario) {
+    let totalPagar = carritoUsuario;
+    let idCompra;
+
+    // Aplicar descuento
+    if (this.nivel === "Oro") {
+      totalPagar = totalPagar - totalPagar * 0.1;
+    }
+
+    // Calculo de puntos
+    this.puntos += parseInt(totalPagar / 10);
+
+    // Categorización
+    if (this.puntos <= 99) {
+      this.nivel = "Bronce";
+    } else if (this.puntos <= 199) {
+      this.nivel = "Plata";
+    } else {
+      this.nivel = "Oro";
+    }
+
+    // ID de compra
+    let random = Math.floor(Math.random() * (9999 - 1000 + 1)) + 1000;
+
+    return `El total a pagar es: ${totalPagar}. ID Compra: ${random}`;
+  }
+}
+
+// Ordenamiento de productos
+function ordenamiento(inventario, orden) {
+  switch (orden) {
+    case "Barato":
+      inventario.sort((a, b) => a.precio - b.precio);
+      break;
+    case "Caro":
+      inventario.sort((a, b) => b.precio - a.precio);
+      break;
+  }
+}
+
+//---------------------------------------------------------------------------------------------------------------
+
+//Ejecución
+let usuario1 = new Usuario("Jorge"); // crear  nuevo usuario
+
+console.log(usuario1); // verificación de usuario creado
+
+let carritoUsuario1 = new Carrito(); // Carrito 1 de Jorge
+
+carritoUsuario1.agregarProductos(p1); // agregar productos al carrito
+carritoUsuario1.agregarProductos(p2); // agregar productos al carrito
+carritoUsuario1.agregarProductos(p3); // agregar productos al carrito
+carritoUsuario1.agregarProductos(p4); // agregar productos al carrito
+console.log("Suma total del carrito: " + carritoUsuario1.totalCarrito()); // preview - precio final
+console.log(usuario1.finalizarCompra(carritoUsuario1.totalCarrito()));
+
+console.log(usuario1); // verificación de usuario creado
+
+let carrito2Usuario1 = new Carrito(); // Carrito 2 de Jorge
+carrito2Usuario1.agregarProductos(p1); // agregar productos al carrito
+console.log("Suma total del carrito: " + carrito2Usuario1.totalCarrito()); // preview - precio final
+console.log(usuario1.finalizarCompra(carrito2Usuario1.totalCarrito()));
+
+let carrito3Usuario1 = new Carrito();
+carrito3Usuario1.agregarProductos(p4); // agregar productos al carrito
+console.log("Suma total del carrito: " + carrito3Usuario1.totalCarrito()); // preview - precio final
+console.log(usuario1.finalizarCompra(carrito3Usuario1.totalCarrito()));
+
+carrito3Usuario1.agregarProductos(p1); // agregar productos al carrito
+console.log("Suma total del carrito: " + carrito3Usuario1.totalCarrito()); // preview - precio final
+console.log(usuario1.finalizarCompra(carrito3Usuario1.totalCarrito()));
+
+console.log(usuario1); // verificación de usuario creado
+
+let carrito4Usuario1 = new Carrito(); // Validación para eliminar ítem
+carrito4Usuario1.agregarProductos(p1);
+carrito4Usuario1.agregarProductos(p2);
+carrito4Usuario1.agregarProductos(p3);
+carrito4Usuario1.agregarProductos(p4);
+console.log(carrito4Usuario1);
+carrito4Usuario1.quitarProducto("Mouse");
+console.log(carrito4Usuario1);
+carrito4Usuario1.quitarProducto("Lampara"); // ítem no encontrado
+console.log(carrito4Usuario1);
+
+//
+let carrito5Usuario1 = new Carrito(); // Validación para eliminar ítem
+carrito5Usuario1.agregarProductos(p1);
+carrito5Usuario1.agregarProductos(p2);
+carrito5Usuario1.agregarProductos(p3);
+carrito5Usuario1.agregarProductos(p4);
+console.log(carrito5Usuario1);
+ordenamiento(carrito5Usuario1.carrito, "Caro");
+console.log(carrito5Usuario1); */
+
+// 📝 Tu Desafío de Refuerzo (Repetido)
+
+/* let empleados = [
+  { nombre: "Lucía", ventas: 15, bono: 0 },
+  { nombre: "Marcos", ventas: 8, bono: 0 },
+  { nombre: "Rocío", ventas: 22, bono: 0 },
+  { nombre: "Esteban", ventas: 5, bono: 0 },
+  { nombre: "Paula", ventas: 18, bono: 0 },
+];
+
+empleados.sort((a, b) => b.ventas - a.ventas);
+console.log(empleados);
+empleados[0].bono = Math.floor(Math.random() * (500 - 100 + 1)) + 100;
+console.log(empleados);
+
+let estadoEmpresa = "recorte";
+
+switch (estadoEmpresa) {
+  case "premiar":
+    let mejorEmpleado = empleados[0].nombre;
+    let bonoEmpleado = empleados[0].bono;
+    console.log(`Mejor empleado: ${mejorEmpleado}. Bono: ${bonoEmpleado}`);
+    break;
+
+  case "recorte":
+    empleados.splice(empleados.length - 2, 2);
+    break;
+
+  default:
+    break;
+}
+
+console.log(empleados); */
+
+//12. Herencia: El siguiente nivel de eficiencia
+
+// CLASE PADRE
+/* class Producto {
+  constructor(nombre, precio) {
+    this.nombre = nombre;
+    this.precio = precio;
+  }
+}
+
+// CLASE HIJA (Hereda de Producto)
+class ProductoFisico extends Producto {
+  constructor(nombre, precio, peso) {
+    super(nombre, precio); // Le pasa el nombre y precio al "padre"
+    this.peso = peso; // El peso es algo ÚNICO del producto físico
+  }
+}
+
+let productoFisico1 = new ProductoFisico("arroz", 4, 1);
+console.log(productoFisico1.nombre); */
+
